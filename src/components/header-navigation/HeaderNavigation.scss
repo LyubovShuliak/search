@@ -1,0 +1,84 @@
+@import "../../global";
+
+nav {
+  height: 49px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: $top-nav;
+  font-family: $main-font;
+  padding-left: 100px;
+  padding-right: 100px;
+  .top_menu {
+    display: flex;
+
+    p {
+      color: $nav-font-color;
+
+      font-style: normal;
+      font-size: 16px;
+      padding-right: 12px;
+      padding-top: 12.5px;
+      margin: 0;
+    }
+    .active {
+      font-weight: 600;
+    }
+
+    p + p:before {
+      content: "";
+      display: inline-block;
+      height: 12px;
+      width: 1px;
+      margin-right: 12px;
+      background-color: white;
+    }
+  }
+  .settings {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    .language {
+      margin: auto;
+      height: 25px;
+      display: flex;
+      & > * {
+        margin: auto;
+      }
+      select {
+        width: 65px;
+        background-color: transparent;
+        color: $nav-font-color;
+        font-weight: 300;
+        font-size: 14px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: "";
+        border: 0px transparent;
+        padding: 2px;
+        margin-right: 10px;
+        width: 50px;
+        option {
+          background-color: $base-color;
+        }
+      }
+      img {
+        height: 7px;
+        width: 14px;
+        position: absolute;
+        right: 100px;
+        top: 21.5px;
+      }
+    }
+    a {
+      font-weight: 500;
+      color: $nav-font-color;
+      margin: auto;
+      margin-left: 35px;
+    }
+  }
+}

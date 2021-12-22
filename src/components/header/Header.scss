@@ -1,0 +1,97 @@
+@import "../../global";
+
+@mixin search-input {
+  background: rgba(255, 255, 255, 0.15);
+  height: 48px;
+  font-size: 16px;
+  border: transparent;
+  outline: transparent;
+  padding-left: 50px;
+  caret-color: white;
+  color: #ffffff;
+  &::placeholder {
+    color: white;
+  }
+}
+@mixin input-image {
+  pointer-events: none;
+  position: absolute;
+  margin: auto;
+}
+@mixin header-style {
+  font-family: "Montserrat";
+  color: #ffffff;
+  text-align: center;
+  margin: auto;
+}
+.head {
+  background-color: $base-color;
+  height: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: c;
+  .title_block {
+    .title {
+      @include header-style;
+      width: 749px;
+      height: 154px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 64px;
+      margin-bottom: 60px;
+    }
+    .subtitle {
+      @include header-style;
+      font-size: 18px;
+      font-weight: 500;
+      font-style: normal;
+      margin-top: 103px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+  }
+  .search {
+    display: flex;
+    width: 830px;
+    justify-content: space-between;
+    margin: 0px auto 59px auto;
+
+    height: 48px;
+    .search_candidate {
+      position: relative;
+      .search_candidate__input {
+        width: 360px;
+        @include search-input;
+      }
+      .search_candidate__icon {
+        height: 14px;
+        width: 14px;
+        top: 17px;
+        left: 17px;
+        @include input-image;
+      }
+    }
+    .search_city {
+      position: relative;
+      .search_city__input {
+        width: 155px;
+        @include search-input;
+      }
+      .search_city__icon {
+        height: 17px;
+        top: 15px;
+        left: 18px;
+        @include input-image;
+      }
+    }
+    .search_button {
+      background-color: transparent;
+      width: 199px;
+      color: white;
+      font-family: $main-font;
+      font-weight: 600;
+      font-size: 16px;
+      border: transparent;
+    }
+  }
+}
